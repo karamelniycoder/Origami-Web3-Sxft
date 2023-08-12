@@ -1,0 +1,51 @@
+{
+  "name": "web3_script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lenster-post": "node ./src/lenster/post.js",
+    "create-wallet": "node  ./libs/createWallet.js",
+    "okx-withdraw": "node libs/okx_withdraw.js",
+    "zk-bridge-deposit": "node ./src/zkSyncEra/01_zk_bridge_deposit.js",
+    "zk-transfer": "node ./src/zkSyncEra/02_zk_transfer.js",
+    "zk-bridge-withdraw": "node ./src/zkSyncEra/04_zk_bridge_withdraw.js",
+    "zk-mint-nft": "node ./src/zkSyncEra/04_zk_mint_nft.js",
+    "fuel-accounts": "ts-node-esm  ./src/fuel/01_fuel_accounts.ts",
+    "fuel-transfer": "ts-node-esm  ./src/fuel/02_fuel_transfer.ts",
+    "fuel-deploy-contract": "ts-node-esm  ./src/fuel/03_fuel_deploy_contract.ts",
+    "fuel-mint-swap-asset": "ts-node-esm  ./src/fuel/04_fuel_mint_swap_asset.ts",
+    "fuel-swap": "ts-node-esm  ./src/fuel/05_fuel_swap.ts",
+    "fuel-lend": "ts-node-esm  ./src/fuel/06_fuel_lend.ts",
+    "stark-account": "node  ./src/starknet/01_starknet_account.js",
+    "stark-bridge-deposit": "node  ./src/starknet/02_starknet_bridge_deposit.js",
+    "stark-deployment-argentx-account": "node  ./src/starknet/03_starkent_deployment_argentx_account.js",
+    "stark-mint-starknetID": "node  ./src/starknet/05_start_mint_starknetId.js",
+    "stark-swap": "node  ./src/starknet/06_start_myswap_swap.js",
+    "mint-nbs": "node  ./src/linea/mint_nbs.js",
+    "sui-account": "node  ./src/sui/01_sui_account.js",
+    "sui-okx-4": "node  ./src/sui/02_sui_okx_4.js",
+    "whitebit-script": "node  ./src/whitebit/1.whitebit_script.js"
+  },
+  "author": "Origami Script",
+  "license": "ISC",
+  "dependencies": {
+    "@mysten/sui.js": "^0.37.1",
+    "axios": "^1.4.0",
+    "bn.js": "^5.2.1",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.9",
+    "dotenv": "^16.3.1",
+    "fuels": "^0.44.2",
+    "starknet": "^5.14.1",
+    "starknetid.js": "^1.5.0",
+    "uuid": "^9.0.0",
+    "web3": "^4.0.3",
+    "zksync-web3": "^0.14.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
